@@ -4,5 +4,5 @@ import { SaidaComponent } from './saida/saida.component'
 
 export const ROUTES: Routes = [
     { path: '', component: AppComponent },
-    { path: 'saida', component: SaidaComponent },
+    { path: '/saida', component: SaidaComponent },
 ]
