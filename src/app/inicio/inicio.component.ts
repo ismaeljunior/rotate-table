@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 import { Router } from '@angular/router';
-import { Matrix } from '../matrix.model';
 import { MatrixService } from '../matrix.service';
 
 @Component({
@@ -11,7 +10,6 @@ import { MatrixService } from '../matrix.service';
   styleUrls: ['./inicio.component.sass']
 })
 export class InicioComponent implements OnInit {
-  matrix = Matrix
   constructor(private route: Router, private matrixService: MatrixService) { }
 
   ngOnInit(): void {
