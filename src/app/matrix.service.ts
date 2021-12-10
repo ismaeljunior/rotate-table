@@ -13,7 +13,11 @@ export class MatrixService {
     this.matrizSaida = matrix;
   }
 
+  getArray() {
+    return this.arrayMatriz;
+  }
+
   getMatrix() {
-    return (this.arrayMatriz, this.matrizSaida);
+    return this.matrizSaida;
   }
 }

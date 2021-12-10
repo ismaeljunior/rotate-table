@@ -36,6 +36,7 @@ export class InicioComponent implements OnInit {
 
     let arrInput = this.lista.split(',');
     if (this.entradaInvalida(arrInput)){
+      this.avancarTela (arrInput, null);
       return;
     }
     var arraySaida;
@@ -63,9 +64,13 @@ export class InicioComponent implements OnInit {
       this.matrizSaida[0] = arrInput[0];
       arraySaida = arrInput[0];
     }
-    this.matrixService.setMatrix(arraySaida, this.matrizSaida);
-    this.route.navigate(['/saida']);
+    this.avancarTela (arraySaida, this.matrizSaida);
     console.log(arrInput);
+  }
+
+  avancarTela (arr: any, matrix: any) {
+    this.matrixService.setMatrix(arr, matrix);
+    this.route.navigate(['/saida']);
   }
 
   entradaInvalida (arr: any[]): boolean {
@@ -73,7 +78,7 @@ export class InicioComponent implements OnInit {
     var aux = arr.filter(numero => (numero !== '' && !isNaN(numero)));
     if(this.lista === '' || aux.length === 0 || aux.length !== arr.length || 
       !Number.isInteger(Math.sqrt(arr.length))) {
-      alert ('erro');
+      // alert ('erro');
       retorno = true;
     }
     return retorno;
