@@ -99,15 +99,22 @@
   
     <!-- Resources -->
     <div class="card-container">
-      <mat-form-field class="example-full-width" appearance="fill">
-        <div class="card-array">{{ arraySaida }} {{ tipoSaida }}</div>
-      </mat-form-field>
+      <mat-card class="card-array">{{ arraySaida }} {{ tipoSaida }}</mat-card>
       <!-- <textarea matInput class="input-lista" placeholder="Entrada" [(ngModel)] ="lista" type="text" name ="lista1"></textarea> -->
       <!-- <input matInput class="input-lista" placeholder="Entrada" [(ngModel)] ="lista" type="text" name ="lista1"> -->
+      <mat-card class="card-array">Matriz entrada:</mat-card>
       <table class="output-table">      
-        <tr class="output-table-row" *ngFor="let i of [0, 1, 2, 3, 4, 5, 6, 7]">         
-          <td class="output-table-data" *ngFor="let j of [0, 1, 2, 3, 4, 5, 6, 7]">     
-            {{ i+j }}        
+        <tr class="output-table-row" *ngFor="let row of matrizSaida; let i = index">         
+          <td class="output-table-data" *ngFor="let col of matrizSaida; let j = index">     
+            {{ matrizSaida[i][j] }}
+          </td>   
+        </tr>  
+      </table>
+      <mat-card class="card-array">Matriz saída:</mat-card>
+      <table class="output-table">      
+        <tr class="output-table-row" *ngFor="let row of matrizSaida; let i = index">         
+          <td class="output-table-data" *ngFor="let col of matrizSaida; let j = index">     
+            {{ matrizSaida[i][j] }}
           </td>   
         </tr>  
       </table>

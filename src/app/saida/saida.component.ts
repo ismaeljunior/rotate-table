@@ -19,6 +19,7 @@ export class SaidaComponent implements OnInit {
   ngOnInit(): void {
     this.arraySaida = this.matrixService.getArray();
     this.matrizSaida = this.matrixService.getMatrix();
+    console.log(this.matrizSaida);
     if(this.matrizSaida === null) {
       this.tipoSaida = '- Inválido '
     } else if (this.arraySaida !== undefined) {

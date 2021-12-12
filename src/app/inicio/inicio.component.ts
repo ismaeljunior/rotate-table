@@ -15,7 +15,6 @@ export class InicioComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  mailFormControl = new FormControl('', [Validators.required, Validators.email]);
   matcher = new ErrorStateMatcher();
   title = 'rotate-table';
   lista: string = '';
@@ -65,7 +64,7 @@ export class InicioComponent implements OnInit {
       arraySaida = arrInput[0];
     }
     this.avancarTela (arraySaida, this.matrizSaida);
-    console.log(arrInput);
+    // console.log(arrInput);
   }
 
   avancarTela (arr: any, matrix: any) {
@@ -138,7 +137,7 @@ export class InicioComponent implements OnInit {
       this.arrayRotacionado.push(aux);
 
       this.percorrer(inicial);
-      console.log(aux);
+      // console.log(aux);
     }
   }
 
