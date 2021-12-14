@@ -89,7 +89,6 @@
   
   </style>
   
-  <!-- Toolbar -->
   <div class="toolbar" role="banner">
     <span class="cabecalho">{{ title }}</span>
       <div class="spacer"></div>
@@ -97,21 +96,16 @@
   
   <div class="content terminal" role="main">
   
-    <!-- Resources -->
-    <!-- <p>Digite abaixo a matriz que você deseja rotacionar em forma <br/>de lista, separado por vírgula exemplo: 1,2,3,4 :</p> -->
     <div class="card-container">
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Entrada</mat-label>
         <textarea
           type="textarea"
           matInput
-          [errorStateMatcher]="matcher"
           placeholder="Ex. 1,2,3,4"
-          matInput class="input-lista" [(ngModel)] ="lista" type="text" name ="lista1"
+          matInput class="input-lista" [(ngModel)] ="listaEntrada" type="text" name ="lista1"
         ></textarea>
       </mat-form-field>
-      <!-- <textarea matInput class="input-lista" placeholder="Entrada" [(ngModel)] ="lista" type="text" name ="lista1"></textarea> -->
-      <!-- <input matInput class="input-lista" placeholder="Entrada" [(ngModel)] ="lista" type="text" name ="lista1"> -->
       <button mat-raised-button class="save-button" color="primary" (click)="save()">Rotacionar</button>
     </div>
   

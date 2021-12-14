@@ -6,15 +6,22 @@ import { Injectable } from '@angular/core';
 export class MatrixService {
   private arrayMatriz!: any[];
   private matrizSaida!: any[];
+  private arrayEntrada!: any[];
+
   constructor() { }
 
-  setMatrix(arr: any, matrix: any) {
-    this.arrayMatriz = arr;
+  setMatrix(outArr: any, matrix: any, inArr: any) {
+    this.arrayMatriz = outArr;
     this.matrizSaida = matrix;
+    this.arrayEntrada = inArr;
   }
 
-  getArray() {
+  getOutputArray() {
     return this.arrayMatriz;
+  }
+
+  getInputArray() {
+    return this.arrayEntrada;
   }
 
   getMatrix() {
